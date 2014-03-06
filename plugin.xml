@@ -22,5 +22,13 @@
     <header-file src="src/ios/Appsee.h" />
     <source-file src="src/ios/Appsee.m" />
 
+    <framework src="AVFoundation.framework" />
+    <framework src="CoreGraphics.framework" />
+    <framework src="CoreMedia.framework" />
+    <framework src="CoreVideo.framework" />
+    <framework src="QuartzCore.framework" />
+    <framework src="SystemConfiguration.framework" />
+    <framework src="src/ios/framework/Appsee.framework" />
+
   </platform> 
 </plugin>
