@@ -4,10 +4,10 @@
 //  Copyright (c) 2014 Reallyenglish. All rights reserved.
 //
 
-#import "Appsee.h"
+#import "CDVAppsee.h"
 #import <Appsee/Appsee.h>
 
-@implementation Appsee
+@implementation CDVAppsee
 
 - (void)init:(CDVInvokedUrlCommand *)command
 {

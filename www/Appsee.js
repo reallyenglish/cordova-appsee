@@ -6,10 +6,11 @@
  * Copyright(c) Reallyenglish 2014
  */
 
-var exec = require('cordova/exec'),
-    Appsee = function(){};
+var exec = require('cordova/exec');
 
-Appsee.prototype.init = function(key, successCallback, errorCallback){
+var Appsee = function(){};
+
+Appsee.init = function(key, successCallback, errorCallback){
   return exec(successCallback, errorCallback, "Appsee", "init", [key]);
 };
 
