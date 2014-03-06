@@ -13,7 +13,7 @@
 {
     NSString *key = [command.arguments objectAtIndex:0];
     
-    [Appsee start:key];
+    [Appsee start:@key];
 }
 
 @end
