@@ -4,9 +4,9 @@
 //  Copyright (c) 2014 Reallyenglish. All rights reserved.
 //
 
+#import "Appsee.h"
 #import "CDVAppsee.h"
 #import <Cordova/CDV.h>
-#import <Appsee/Appsee.h>
 
 @implementation CDVAppsee
 
