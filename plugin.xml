@@ -15,7 +15,7 @@
   <platform name="ios">
     <config-file target="config.xml" parent="/*">
       <feature name="Appsee">
-        <param name="ios-package" value="Appsee"/>
+        <param name="ios-package" value="CDVAppsee"/>
       </feature>
     </config-file>
 
