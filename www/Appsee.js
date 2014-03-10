@@ -14,4 +14,4 @@ Appsee.init = function(key, successCallback, errorCallback){
   return exec(successCallback, errorCallback, "Appsee", "init", [key]);
 };
 
-module.exports = new Appsee();
+module.exports = Appsee;
