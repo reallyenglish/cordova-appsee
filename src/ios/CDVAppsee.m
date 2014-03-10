@@ -5,6 +5,7 @@
 //
 
 #import "CDVAppsee.h"
+#import <Cordova/CDV.h>
 #import <Appsee/Appsee.h>
 
 @implementation CDVAppsee
@@ -13,7 +14,7 @@
 {
     NSString *key = [command.arguments objectAtIndex:0];
     
-    [Appsee start:@key];
+    [Appsee start:key];
 }
 
 @end
