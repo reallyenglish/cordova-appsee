@@ -21,8 +21,6 @@
 
     <header-file src="src/ios/CDVAppsee.h" />
     <source-file src="src/ios/CDVAppsee.m" />
-    <header-file src="src/ios/Appsee.h" />
-    <source-file src="src/ios/Appsee"/>
 
     <framework src="AVFoundation.framework" />
     <framework src="CoreGraphics.framework" />
@@ -30,5 +28,7 @@
     <framework src="CoreVideo.framework" />
     <framework src="QuartzCore.framework" />
     <framework src="SystemConfiguration.framework" />
+    <framework src="src/ios/framework/Appsee.framework" custom="true"/>
+
   </platform> 
 </plugin>
