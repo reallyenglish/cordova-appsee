@@ -11,7 +11,7 @@ var exec = require('cordova/exec');
 var Appsee = function(){};
 
 Appsee.init = function(key, successCallback, errorCallback){
-  return exec(successCallback, errorCallback, "CDVAppsee", "init", [key]);
+  return exec(successCallback, errorCallback, "Appsee", "init", [key]);
 };
 
 module.exports = Appsee;
