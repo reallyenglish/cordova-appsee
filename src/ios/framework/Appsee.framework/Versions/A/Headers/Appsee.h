@@ -2,7 +2,7 @@
 //  Appsee.h
 //  Appsee
 //
-//  Copyright (c) 2012 Shift 6 Ltd. All rights reserved.
+//  Copyright (c) 2014 Shift 6 Ltd. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -35,7 +35,7 @@
  */
 +(void)stopAndUpload;
 
-/** Pause recording of the video. Note: user gestures will still be recorded. To resume, call 'resume'.
+/** Pause recording of the video. To resume, call 'resume'.
  */
 +(void)pause;
 
@@ -106,6 +106,11 @@
  @param view A UIView that contains sensitive information.
  */
 +(void)markViewAsSensitive:(UIView*)view;
+
+/** Unmark a view as sensitive, so it will be displayed in videos.
+ @param view A UIView that no longer contains sensitive information.
+ */
++(void)unmarkViewAsSensitive:(UIView*)view;
 
 
 
