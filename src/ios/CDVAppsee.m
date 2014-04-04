@@ -1,12 +1,12 @@
 //
-//  Appsee.m
+//  CDVAppsee.m
 //
 //  Copyright (c) 2014 Reallyenglish. All rights reserved.
 //
 
 #import "CDVAppsee.h"
-#import <Cordova/CDV.h>
 #import <Appsee/Appsee.h>
+#import <Foundation/NSException.h>
 
 @implementation CDVAppsee
 
@@ -18,4 +18,3 @@
 }
 
 @end
-
