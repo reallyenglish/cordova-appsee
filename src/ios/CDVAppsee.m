@@ -17,4 +17,13 @@
     [Appsee start:key];
 }
 
+- (void)startScreen:(CDVInvokedUrlCommand *)command
+{
+    NSString *screenName= [command.arguments objectAtIndex:0];
+    
+    NSLog(@"screenName: %@", screenName);
+
+    [Appsee startScreen:screenName];
+}
+
 @end
