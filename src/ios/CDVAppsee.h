@@ -5,8 +5,9 @@
 
 #import <Cordova/CDV.h>
 
-@interface CDVAppsee : CDVPlugin
+@interface CDVAppsee: CDVPlugin
 
 - (void)init:(CDVInvokedUrlCommand *)command;
+- (void)startScreen:(CDVInvokedUrlCommand *)command;
 
 @end

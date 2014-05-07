@@ -14,4 +14,8 @@ Appsee.init = function(key, successCallback, errorCallback){
   return exec(successCallback, errorCallback, "Appsee", "init", [key]);
 };
 
+Appsee.startScreen = function(screenName, successCallback, errorCallback){
+  return exec(successCallback, errorCallback, "Appsee", "startScreen", [screenName]);
+};
+
 module.exports = Appsee;
