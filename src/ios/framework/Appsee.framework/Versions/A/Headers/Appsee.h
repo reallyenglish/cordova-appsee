@@ -112,6 +112,22 @@
  */
 +(void)unmarkViewAsSensitive:(UIView*)view;
 
+/******
+ OpenGL
+ ******/
+
+/** Mark the starting of the render loop. This method is optional and should be called only if calling appendGLFrame: alone results in empty videos.
+ This should be called right after binding a render buffer, and before drawing object onto it. After drawing the objects, call presentRenderBuffer:.
+ */
++(void)startRenderLoop;
+
+/** Append the GL render buffer to the video. Should be called right before calling 'presentRenderbuffer:'.
+ If you have more than one render buffer, bind it first using glBindRenderbufferOES.
+ @param glView The GL view.
+ @param includeUIKit Whether to include UIKit elements to the video, on top of the OpenGL elements. Default = YES.
+ */
++(void)appendGLFrame:(UIView*)glView;
++(void)appendGLFrame:(UIView*)glView includeUIKitElements:(BOOL)includeUIKit;
 
 
 @end
