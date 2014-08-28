@@ -1,20 +1,20 @@
 package org.reallyenglish.cordova;
 
 import org.apache.cordova.CordovaPlugin;
-import org.apache.cordova.PluginResult;
 import org.apache.cordova.CallbackContext;
-
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 
+import java.util.List;
 import java.util.Map;
+import java.util.HashMap;
+import java.util.ArrayList;
+
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.appsee.Appsee;
 
-/**
- * This class echoes a string called from JavaScript.
- */
 public class AppseePlugin extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callback) throws JSONException {
@@ -98,7 +98,7 @@ public class AppseePlugin extends CordovaPlugin {
             throw new IllegalArgumentException("missing event name");
         }
         if (args.length() == 2 && !args.isNull(1)) {
-            Map properties = (Map) args.get(1);
+            Map<String, Object> properties = (HashMap<String, Object>)args.get(1);
             Appsee.addEvent(name, properties);
         } else {
             Appsee.addEvent(name);
