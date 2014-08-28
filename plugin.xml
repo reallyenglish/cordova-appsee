@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-  id="org.reallyenglish.appsee" version="0.4.0">
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="org.reallyenglish.appsee"
+        version="1.0.0">
+
   <name>Appsee</name>
   <description>Reallyenglish Appsee</description>
+  <author>Lkhagva Ochirkhuyag</author>
   <license>Apache 2.0</license>
   <keywords>reallyenglish,appsee</keywords>
   <engines>
@@ -30,5 +34,24 @@
     <framework src="SystemConfiguration.framework" />
     <framework src="src/ios/framework/Appsee.framework" custom="true"/>
 
-  </platform> 
+  </platform>
+
+  <platform name="android">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <config-file target="config.xml" parent="/*">
+      <feature name="Appsee">
+        <param name="android-package" value="org.reallyenglish.cordova.AppseePlugin"/>
+      </feature>
+    </config-file>
+
+    <config-file target="AndroidManifest.xml" parent="/manifest/application">
+      <service android:name="com.appsee.AppseeBackgroundUploader" />
+    </config-file>
+
+    <source-file src="src/android/appsee.jar" target-dir="libs" framework="true" />
+    <source-file src="src/android/AppseePlugin.java" target-dir="src/org/reallyenglish/cordova" custom="true" />
+  </platform>
 </plugin>
