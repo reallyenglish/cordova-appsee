@@ -37,10 +37,6 @@
   </platform>
 
   <platform name="android">
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_LOGS" />
-
     <config-file target="config.xml" parent="/*">
       <feature name="Appsee">
         <param name="android-package" value="org.reallyenglish.cordova.AppseePlugin"/>
@@ -49,6 +45,12 @@
 
     <config-file target="AndroidManifest.xml" parent="/manifest/application">
       <service android:name="com.appsee.AppseeBackgroundUploader" />
+    </config-file>
+
+    <config-file target="AndroidManifest.xml" parent="/manifest">
+      <uses-permission android:name="android.permission.READ_LOGS" />
+      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+      <uses-permission android:name="android.permission.INTERNET" />
     </config-file>
 
     <source-file src="src/android/appsee.jar" target-dir="libs" framework="true" />
