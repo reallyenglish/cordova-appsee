@@ -21,4 +21,20 @@ sign-up with the [Appsee](http://appsee.com/) to get a valid key.
 plugins.appsee.init(key);
 ```
 
+Appsee automatically detects the different screens in your app.
+However in some cases where screen detection is not available (for example in OpenGL apps) you can set screens manually.
+
+```
+plugins.appsee.startScreen(screenName);
+```
+
+## Update
+
+Remove and install again.
+
+```
+cordova plugin remove org.reallyenglish.appsee
+cordova plugin add https://github.com/reallyenglish/cordova-appsee.git
+```
+
 We've tested it with a backbone application and it worked fine for us.
