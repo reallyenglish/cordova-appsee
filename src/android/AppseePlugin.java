@@ -9,7 +9,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Map;
-import android.view.View;
 
 import com.appsee.Appsee;
 
