@@ -13,17 +13,29 @@
 - (void)init:(CDVInvokedUrlCommand *)command
 {
     NSString *key = [command.arguments objectAtIndex:0];
-    
+
     [Appsee start:key];
 }
 
 - (void)startScreen:(CDVInvokedUrlCommand *)command
 {
     NSString *screenName= [command.arguments objectAtIndex:0];
-    
-    NSLog(@"screenName: %@", screenName);
 
     [Appsee startScreen:screenName];
+}
+
+- (void)markViewAsSensitive:(CDVInvokedUrlCommand *)command
+{
+    UIView *view= [self webView];
+
+    [Appsee markViewAsSensitive:view];
+}
+
+- (void)unmarkViewAsSensitive:(CDVInvokedUrlCommand *)command
+{
+    UIView *view= [self webView];
+
+    [Appsee unmarkViewAsSensitive:view];
 }
 
 @end

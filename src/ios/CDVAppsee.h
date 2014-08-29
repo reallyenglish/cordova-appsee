@@ -9,5 +9,7 @@
 
 - (void)init:(CDVInvokedUrlCommand *)command;
 - (void)startScreen:(CDVInvokedUrlCommand *)command;
+- (void)markViewAsSensitive:(CDVInvokedUrlCommand *)command;
+- (void)unmarkViewAsSensitive:(CDVInvokedUrlCommand *)command;
 
 @end
