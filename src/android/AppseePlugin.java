@@ -1,17 +1,13 @@
 package org.reallyenglish.cordova;
 
-import org.apache.cordova.CordovaPlugin;
-import org.apache.cordova.CallbackContext;
+import java.util.Map;
+import java.util.HashMap;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 
-import java.util.List;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.ArrayList;
-
-import android.view.View;
-import android.view.ViewGroup;
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.CallbackContext;
 
 import com.appsee.Appsee;
 
@@ -25,6 +21,10 @@ public class AppseePlugin extends CordovaPlugin {
                 this.startScreen(args);
             } else if ("addEvent".equals(action)) {
                 this.addEvent(args);
+            } else if ("markViewAsSensitive".equals(action)) {
+                this.markViewAsSensitive(args);
+            } else if ("unmarkViewAsSensitive".equals(action)) {
+                this.unmarkViewAsSensitive(args);
             } else if ("setUserId".equals(action)) {
                 this.setUserId(args);
             } else if ("setLocation".equals(action)) {
@@ -102,6 +102,40 @@ public class AppseePlugin extends CordovaPlugin {
             Appsee.addEvent(name, properties);
         } else {
             Appsee.addEvent(name);
+        }
+    }
+
+    /**
+     * Marks view as sensitive.
+     *
+     * markViewAsSensitive API needs reference to native instance of
+     * andoid.view.View. But hybrid cordova apps have only one native view(web view)
+     * and all things inside web view is html.
+     *
+     * @param Array of arguments.
+     * @todo Update it if appsee api support comes for elements inside web view.
+     */
+    private void markViewAsSensitive(JSONArray args) throws UnsupportedOperationException, JSONException {
+        if (args.length() == 0) {
+            Appsee.markViewAsSensitive(this.webView);
+        } else {
+            //TODO
+            throw new UnsupportedOperationException("can't access contents of web view");
+        }
+    }
+
+    /**
+     * Unmarks previously marked sensitive view.
+     *
+     * @param Array of arguments.
+     * @todo Update it if appsee api support comes for elements inside web view.
+     */
+    private void unmarkViewAsSensitive(JSONArray args) throws UnsupportedOperationException, JSONException {
+        if (args.length() == 0) {
+            Appsee.unmarkViewAsSensitive(this.webView);
+        } else {
+            // TODO
+            throw new UnsupportedOperationException("can't access contents of web view");
         }
     }
 
