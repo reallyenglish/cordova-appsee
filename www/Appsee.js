@@ -52,11 +52,11 @@ Appsee.setLocationDescription = function(description, successCallback, errorCall
   return exec(successCallback, errorCallback, 'Appsee', 'setLocationDescription', [description]);
 };
 
-Appsee.markViewAsSensitive = function(successCallback, errorCallback){
+Appsee.markViewAsSensitive = function(input, successCallback, errorCallback){
   return exec(successCallback, errorCallback, 'Appsee', 'markViewAsSensitive', []);
 };
 
-Appsee.unmarkViewAsSensitive = function(successCallback, errorCallback){
+Appsee.unmarkViewAsSensitive = function(input, successCallback, errorCallback){
   return exec(successCallback, errorCallback, 'Appsee', 'unmarkViewAsSensitive', []);
 };
 
