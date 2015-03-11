@@ -1,3 +1,7 @@
+# This plugin is now deprecated
+
+Please use the [official Appsee plugin](http://plugins.cordova.io/#/package/com.appsee.plugin).
+
 # cordova-appsee
 
 Cordova Appsee plugin repository. It works with cordova-3.4.0.
